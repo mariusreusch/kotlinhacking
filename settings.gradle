@@ -1,0 +1,4 @@
+rootProject.name = 'kotlinhacking'
+include 'testmodule'
+include 'testmodule1'
+

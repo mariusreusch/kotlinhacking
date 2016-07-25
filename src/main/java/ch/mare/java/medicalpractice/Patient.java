@@ -110,6 +110,21 @@ public class Patient {
         return Objects.hash(insurancePolicyNumber, firstName, lastName, bloodType, birthDate, sizeInCentimeter, weightInKilogram, gender, consultations);
     }
 
+    @Override
+    public String toString() {
+        return "Patient{" +
+                "insurancePolicyNumber='" + insurancePolicyNumber + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", bloodType='" + bloodType + '\'' +
+                ", birthDate=" + birthDate +
+                ", sizeInCentimeter=" + sizeInCentimeter +
+                ", weightInKilogram=" + weightInKilogram +
+                ", gender=" + gender +
+                ", consultations=" + consultations +
+                '}';
+    }
+
     public Consultation getLastConsultation() {
         Consultation latestConsultation = null;
         for (Consultation consultation : consultations) {

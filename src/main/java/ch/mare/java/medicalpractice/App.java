@@ -14,6 +14,8 @@ public class App {
         consultations.add(new Consultation(LocalDate.of(2016, Month.JULY, 18), 1000.00, "Remove caries", false));
 
         new Patient("4321", "Kuni", "Bert", LocalDate.of(1975, Month.DECEMBER, 12), Gender.MALE, "A", 180, 90, consultations);
+
+        // TODO: 25/07/16 null value
         new Patient("1337", "Peterchen", "Peterson", LocalDate.of(1975, Month.DECEMBER, 12), Gender.MALE, null, 160, 100);
     }
 }

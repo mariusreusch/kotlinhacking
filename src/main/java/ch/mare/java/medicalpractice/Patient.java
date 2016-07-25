@@ -107,17 +107,7 @@ public class Patient {
 
     @Override
     public int hashCode() {
-        return Objects.hash(insurancePolicyNumber, firstName, lastName, bloodType, birthDate);
-    }
-
-    @Override
-    public String toString() {
-        return "Patient{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", bloodType='" + bloodType + '\'' +
-                ", birthDate=" + birthDate +
-                '}';
+        return Objects.hash(insurancePolicyNumber, firstName, lastName, bloodType, birthDate, sizeInCentimeter, weightInKilogram, gender, consultations);
     }
 
     public Consultation getLastConsultation() {
@@ -126,21 +116,12 @@ public class Patient {
             if (latestConsultation == null) {
                 latestConsultation = consultation;
             } else {
-                if(consultation.getDate().isAfter(latestConsultation.getDate())){
+                if (consultation.getDate().isAfter(latestConsultation.getDate())) {
                     latestConsultation = consultation;
                 }
             }
         }
         return latestConsultation;
-
-        /*List<Consultation> sortedConsultations = consultations.stream()
-                .sorted((o1, o2) -> o1.getDate().compareTo(o2.getDate()))
-                .collect(Collectors.toList());
-        Collections.reverse(sortedConsultations);
-        if (sortedConsultations.isEmpty()) {
-            return null;
-        }
-        return sortedConsultations.get(0);*/
     }
 
     public double calcTotalAmount() {
@@ -157,9 +138,7 @@ public class Patient {
     }
 
 
-    // TODO: 22/07/16 Methode mit return null
-
-    // TODO: 22/07/16 hier zum Vergleich noch eine pre Java 8 Stream/Lambda Methode und dann auch Bezug auf Android
+    // TODO: 22/07/16 hier zum Vergleich noch eine pre Java 8 Stream/Lambda Methode
     /*public double calcTotalAmountOfUnpaidConsultationsBeForeJava8(){
         double amount = 0.0;
         for (Consultation consultation : consultations) {

@@ -1,7 +1,7 @@
-package ch.mare.kotlin
+package ch.mare.kotlin.medicalpractice
 
-import ch.mare.java.Consultation
-import ch.mare.java.Gender
+import ch.mare.java.medicalpractice.Consultation
+import ch.mare.java.medicalpractice.Gender
 import java.time.LocalDate
 
 data class Patient(val insurancePolicyNumber: String, val firstName: String, val lastName: String,

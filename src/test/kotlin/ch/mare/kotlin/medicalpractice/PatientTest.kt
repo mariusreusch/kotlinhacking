@@ -1,7 +1,7 @@
-import ch.mare.java.Consultation
-import ch.mare.java.ConsultationWithSurgery
-import ch.mare.java.Gender
-import ch.mare.kotlin.Patient
+package ch.mare.kotlin.medicalpractice
+
+import ch.mare.java.medicalpractice.Consultation
+import ch.mare.java.medicalpractice.Gender
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Test

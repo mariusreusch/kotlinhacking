@@ -1,8 +1,9 @@
-package ch.mare.kotlin
+package ch.mare.kotlin.medicalpractice
 
-import ch.mare.java.Consultation
-import ch.mare.java.ConsultationWithSurgery
-import ch.mare.java.Gender.MALE
+import ch.mare.java.medicalpractice.Consultation
+import ch.mare.java.medicalpractice.ConsultationWithSurgery
+import ch.mare.java.medicalpractice.Gender
+import ch.mare.java.medicalpractice.Gender.*
 import java.time.LocalDate
 import java.time.Month
 
